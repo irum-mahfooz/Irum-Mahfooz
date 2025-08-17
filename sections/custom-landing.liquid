@@ -51,7 +51,7 @@
         {% if product %}
           <div class="product-card">
             <a href="{{ product.url }}">
-              <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+           {{ product.featured_image | image_url: width: 400 | image_tag: alt: product.title }}
               <h3>{{ product.title }}</h3>
               <p>{{ product.price | money }}</p>
             </a>
